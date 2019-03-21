@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img{
+    user-drag: none; 
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+p{
+    margin: 20px 0;
+    line-height: 30px;
+}
+body{
+    font-family: 'Roboto', 'Rubik', sans-serif;
+    font-size: 12pt;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.dark{ background-color: #33648B; color: #ffffff;}
+.darker{ background-color: #212939;  color: #ffffff;}
+.darkest{ background-color: #212129;  color: #ffffff;}
+.light{ color: #8CDEF7;}
+.fullwidth{width: 100%; display:block;}
+.float-right{float: right;}
+.float-left{float: left;}
+
+.container{
+    width: 100%;
+    padding: 0 8.33%;
+    display: table;
+}
+
+.body{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.stop-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+
+.header{
+    height: 60px;
+    padding-top: 5px;
+    
+}
+
+footer{
+    height: 60px;
+    text-align: center;
+    
+}
+
+.socials-container{
+    max-width: 200px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.socials{
+    margin: 0 10px;
+}
+
+
+
+nav{
+    height: 100%; 
+}
+
+nav>div{
+    height: 100%;
+    float: left;
+    margin-right: 60px;
+}
+
+nav>#toggle-container>ul{
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+}
+
+nav>#toggle-container>ul>li{
+    display: inline-block;
+    height: 100%;    
+}
+
+nav>#toggle-container>ul>li>a{
+    text-decoration: none;
+    padding: 17px 20px;
+    color: #ffffff;
+    font-size: .83em; 
+    float: left;
+}
+
+nav>#toggle-container>ul>li>a:hover{
+        color: #8CDEF7;
+        transition: .5s;
+}
+.active{
+        color: #8CDEF7 !important;
+}
+ 
+.banner{
+    height: 91vh;
+}
+
+ #toggle-container{
+     display: block;
+}
+
+#toggler{
+    margin: 15px 0;
+}
+
+.mobile, #toggler{
+    display: none;
+}
+
+.desktop{
+    display: block;
+}
+
+/*============== BANNER ANIMATION ======================*/
+.banner-item-container{
+    max-width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    
+    background: rgba(33,41,57, 0.6);
+}
+
+.banner-item{
+    border-left: 2px solid #8CDEF7;
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+.banner-item>h4{
+    display: inline;
+}
+
+
+.banner-item>h3{
+    margin-bottom: 5px;
+/*    font-weight: 100 !important;*/
+}
+
+.hello{
+    margin-bottom: 5px;
+    font-weight: 100 !important;
+}
+
+.banner-item>p{
+    margin-bottom: 25px;
+    font-weight: 100 !important;
+}
+
+.banner {
+  margin:0px;
+  text-align:left;
+  padding-top:15vh;
+  color:#fff;
+  font-family:'Roboto';
+  font-size:20px;
+  font-weight: bold;
+  overflow:hidden;
+/*  animation:bg 10s linear infinite;*/
+  background: url(../Images/dp.jpg) no-repeat bottom right;
+    
+    background-color: #212939;
+}
+
+#dropping-texts {
+  display: inline-block;
+  max-width: 350px;
+  text-align: left;
+  height: 36px;
+  margin-top: -10px;
+  position:absolute;
+  font-weight:300; 
+  padding: 0 3px 0 0 ;
+/*  border-right: 2px solid rgba(225, 204, 41, 1);*/
+  height: 25px;
+    
+}
+
+#aboutme{
+    max-width: 650px;
+    margin: auto;
+}
+
+button{
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.button{
+    background-color: #FFCC29;
+    border: none;
+    color: #000000 !important;
+    padding: 10px 15px;
+    margin: 30px 15px 30px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.button:hover{
+    color: #ffffff !important;
+    background-color: #33648B;
+    cursor: pointer;
+    transition: .5s;
+/*    color: #000000;*/
+}
+
+
+/*=================== PORTFOLIO STARTS HERE ====================*/
+.title{
+    min-height: 120px;
+    padding: 30px;
+    text-align: center;
+    color: #8CDEF7;
+    background: #212530;
+    
+}
+
+.title>h2{
+    font-weight: 100;
+    font-family:'Roboto';
+    font-size: 50px;
+}
+
+.card-container {
+    width: 24%;
+    margin: .5%;
+    display: table;
+    float: left;
+    overflow: hidden;
+    position: relative; 
+    border: 4px solid rgba(33,33,41, .3);
+}
+
+
+.card-container:hover{
+    cursor: pointer;
+}
+
+.selected{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 90;
+    margin: 0;
+    left : 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 12vh 0 0 0px;
+    background: rgba(33,33,41, .5);  
+}
+
+#closeimage{
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    width: 25px;
+    right: 20px;
+    top: 20px;
+    bottom: 0;
+    display: none;
+}
+
+.card-image-container{
+    overflow: hidden;
+    padding: 0;
+    z-index: 1;
+    max-width: 500px;
+    margin: auto;
+}
+
+.portfolio-image{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+}
+
+
+.full-detail{
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 171, 214, .9);
+    position: absolute;
+    z-index: 3;
+    padding: 40% 15px;
+    top: 0;
+    opacity: 0;
+    text-align: center;    
+}
+
+.clone{
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 171, 214, 0);
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    cursor: pointer;  
+}
+
+.hide{
+    display:block;
+}
+
+.show{
+    display:block;
+}
+
+.full-detail>h3{
+    margin: -20px 0 10px 0;
+    font-weight: 100;
+    font-size: 100%;
+}
+
+.view{
+    margin: 5px 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.view:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/*=================== PORTFOLIO ==END== HERE ====================*/
+.fill{
+    width: 20px;
+    height: 60vh;
+}
+.write-container{
+    width: 100%;
+    max-width: 700px;
+    height: 100px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.write-left{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    display: block;
+
+}
+
+.write-right{
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    float: left;
+   
+}
+
+.write-left>img{ 
+   
+}
+
+
+
+.topic{
+    padding: 0px 10px 10px 10px;
+    width: 100%;
+    height: 35px;
+    font-size: 90%;
+    color: #8CDEF7;
+    background: #212530;
+    overflow: hidden;
+    position: relative;
+}
+
+.topic>a>h2{
+    font-weight: 300;
+    overflow: hidden;
+    line-height: 35px;
+}
+
+.topic>a{
+    color: #8CDEF7;
+    overflow: hidden;
+}
+
+.content{
+    padding: 5px 10px 10px 10px;
+    height: 100px;
+    overflow: hidden;
+    background: rgba(33,33,41, .3);
+    position: relative;
+}
+
+.fade{
+    position: absolute; 
+    bottom: 0px; 
+    right: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; 
+    padding: 35px 0; 
+    background-image: linear-gradient(to bottom, rgba(33,39,51, 0), rgba(33,39,51, 1), rgba(33,39,51, 1), rgba(33,39,51, 1));
+}
+
+.fade-right{
+   position: absolute; 
+    top: 0; 
+    right: 0;
+    width: 10%; 
+    text-align: center; 
+    margin: 0; 
+    padding:  17.5px 0; 
+    background-image: linear-gradient(to right, rgba(33,39,51, 0), rgba(33,39,51, 1), rgba(33,39,51, 1));
+}
+
+.content>a>p{
+    margin: 0;
+    font-weight: 100;
+    width: 80%;
+    max-width: 600px;
+    font-size: 90%;
+    line-height: 17px;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .card-container {
+        width: 32%;
+        margin: .5%;
+    }
+    
+    .write-container{
+      
+    }
+    
+    .write-right{
+        
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 800px) {
+    .write-container{
+       
+    }
+    .write-right{
+        
+    }
+    
+    .write-left{
+       
+    }
+}
+
+@media only screen and (max-width: 718px) {
+    .write-right{
+        
+    }
+    
+    .write-left{
+       
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    #toggle-container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(140,222,247, .9);
+        text-align: center;
+        padding: 20px 0;  
+        z-index: 100;
+    }
+    
+    .mobile{
+        display: inline-block !important;
+    }
+    
+    .desktop{
+        display: none !important;
+    }
+    
+    #toggler{
+        display: inline-block;
+    }
+    
+    
+    
+    nav>#toggle-container>ul{
+        display:block;
+        width: auto;
+        height: auto;
+        margin-top: 100px;  
+    }
+    
+    nav>#toggle-container>ul>li{
+        display:block;
+        height: auto;
+        margin: 60px 0;
+    }
+
+    nav>#toggle-container>ul>li>a{
+        text-decoration: none;
+        padding: 17px 20px;
+        color: #ffffff;
+        font-size: .83em;
+        float: none; 
+    } 
+    
+    nav>#toggle-container>ul>li>a:hover, .active{
+        background-color: #212129;
+        color: #8CDEF7;
+        transition: .5s;
+    }
+    
+    
+     .card-container {
+        width: 49%;
+        margin: .5%;
+    }
+    
+    .button{
+        margin: 30px 7px 30px 0;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 7px;
+    }
+    
+    .selected{
+        padding: 24vh 0 0 0px;
+    }
+    
+    .selected>.card-image-container{
+        padding: 0 5%;
+    }
+    
+     .write-right{
+       
+    }
+    
+     @media only screen and (max-width: 570px) {
+        .write-right{
+         
+        }
+         
+    }
+    
+    @media only screen and (max-width: 520px) {
+        .write-container{
+           
+        }
+
+        .write-left{
+            
+        }
+        
+        .write-right{
+            
+        }
+    }
+    @media only screen and (max-width: 472px) {
+        .content>a>p{
+            font-weight: 100;
+            width: 65%;
+        }
+        
+        .banner {
+            background: url(../Images/samsonnewauto.png) no-repeat center center;
+            background-color: #212939;
+        }
+           
+    }
+    
+    @media only screen and (orientation: landscape) {
+         nav>#toggle-container>ul>li{
+            display:inline-block;
+            margin: -20px 0;
+        }
+    }
+
+}
+
